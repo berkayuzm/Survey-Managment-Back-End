@@ -27,8 +27,8 @@ router.post(
       .isLength({ min: 5 })
       .withMessage("Anket başlığı en az 5 karakter olmalıdır."),
     body("description")
-      .isLength({ min: 20 })
-      .withMessage("Anket açıklaması en az 20 karakter olmalıdır."),
+      .isLength({ min: 10})
+      .withMessage("Anket açıklaması en az 10 karakter olmalıdır."),
   ],
   async function (req, res, next) {
     const { user_id, title, description } = req.body;

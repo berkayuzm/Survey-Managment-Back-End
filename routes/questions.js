@@ -23,8 +23,8 @@ router.get('/',   async function(req, res, next) {
 
 router.post("/",[
   body("text")
-    .isLength({ min: 10 })
-    .withMessage("Soru en az 10 karakter olmalıdır."),
+    .isLength({ min: 5 })
+    .withMessage("Soru en az 5 karakter olmalıdır."),
 ], async function (req, res, next) {
   const errors = validationResult(req);
 
